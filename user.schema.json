@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/user.schema.json",
+  "title": "User Document Schema",
+  "type": "object",
+  "description": "Schema for a user document stored in the Firestore 'users' collection.",
+  "properties": {
+    "birthday": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The user's birthdate as a timestamp in ISO 8601 format (RFC 3339)."
+    },
+    "created_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of when the user document was created."
+    },
+    "display_name": {
+      "type": "string",
+      "description": "The display name of the user, shown in the app UI."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "The user's email address."
+    },
+    "hometown": {
+      "type": "string",
+      "description": "The user's hometown, as a plain text string."
+    },
+    "photo_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL pointing to the user's profile photo stored in Firebase Storage or elsewhere."
+    },
+    "uid": {
+      "type": "string",
+      "description": "The unique identifier assigned to the user (usually by Firebase Authentication)."
+    }
+  },
+  "required": [
+    "birthday",
+    "created_time",
+    "display_name",
+    "email",
+    "hometown",
+    "photo_url",
+    "uid"
+  ],
+  "additionalProperties": false
+}

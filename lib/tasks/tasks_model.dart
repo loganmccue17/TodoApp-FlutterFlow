@@ -1,9 +1,21 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
 import 'tasks_widget.dart' show TasksWidget;
 import 'package:flutter/material.dart';
 
 class TasksModel extends FlutterFlowModel<TasksWidget> {
+  ///  Local state fields for this page.
+
+  String inspoQuote = ' ';
+
+  int? randomNum = 1;
+
+  ///  State fields for stateful widgets in this page.
+
+  // Stores action output result for [Backend Call - API (InspirationZenQuotes)] action in tasks widget.
+  ApiCallResponse? apiResultyda;
+
   @override
   void initState(BuildContext context) {}
 
